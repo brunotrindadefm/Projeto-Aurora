@@ -8,7 +8,7 @@ export function init() {
 
     preencherSelect(
         'universidade',
-        'http://localhost:8080/api/universidade',
+        '/api/universidade',
         'id',
         'nome'
     );

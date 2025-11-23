@@ -9,14 +9,14 @@ export function init() {
 
     preencherSelect(
         'aluno',
-        'http://localhost:8080/api/aluno',
+        '/api/aluno',
         'matricula',
         'nome'
     );
 
     preencherSelect(
         'disciplina',
-        'http://localhost:8080/api/disciplina',
+        '/api/disciplina',
         'id',
         'nome'
     );

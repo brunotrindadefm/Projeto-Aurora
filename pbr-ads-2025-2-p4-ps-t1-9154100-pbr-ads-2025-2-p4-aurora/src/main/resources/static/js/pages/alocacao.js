@@ -8,14 +8,14 @@ export function init() {
 
     preencherSelect(
         'professor',
-        'http://localhost:8080/api/professor',
+        '/api/professor',
         'matricula',
         'nome'
     );
 
     preencherSelect(
         'turma',
-        'http://localhost:8080/api/turma',
+        '/api/turma',
         'id',
         'nome'
     );

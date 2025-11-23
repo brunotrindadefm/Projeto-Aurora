@@ -8,14 +8,14 @@ export function init() {
 
     preencherSelect(
         'tipo',
-        'http://localhost:8080/api/tipo-turma',
+        '/api/tipo-turma',
         'id',
         'descricao'
     );
 
     preencherSelect(
         'oferta',
-        'http://localhost:8080/api/oferta',
+        '/api/oferta',
         'id',
         'descricao'
     );

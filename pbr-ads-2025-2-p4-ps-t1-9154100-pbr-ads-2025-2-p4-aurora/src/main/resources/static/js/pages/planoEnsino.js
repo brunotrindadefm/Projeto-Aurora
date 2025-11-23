@@ -9,7 +9,7 @@ export function init() {
 
     preencherSelect(
         'disciplina',
-        'http://localhost:8080/api/plano-ensino/disciplinas-sem-plano',
+        '/api/plano-ensino/disciplinas-sem-plano',
         'id',
         'nome'
     );
@@ -120,7 +120,7 @@ async function salvarOuAtualizar(e) {
 
         preencherSelect(
             'disciplina',
-            'http://localhost:8080/api/plano-ensino/disciplinas-sem-plano',
+            '/api/plano-ensino/disciplinas-sem-plano',
             'id',
             'nome'
         );

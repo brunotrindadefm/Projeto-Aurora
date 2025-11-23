@@ -8,19 +8,19 @@ export function init() {
 
     preencherSelect(
         'titulacao',
-        'http://localhost:8080/api/titulacao',
+        '/api/titulacao',
         'id',
         'nome'
     );
     preencherSelect(
         'categoria',
-        'http://localhost:8080/api/categoria',
+        '/api/categoria',
         'id',
         'nome'
     );
     preencherSelect(
         'regime-trabalho',
-        'http://localhost:8080/api/regime-trabalho',
+        '/api/regime-trabalho',
         'id',
         'nome'
     );

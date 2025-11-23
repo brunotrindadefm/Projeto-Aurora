@@ -9,7 +9,7 @@ export function init() {
 
     preencherSelect(
         'curso',
-        'http://localhost:8080/api/curso',
+        '/api/curso',
         'id',
         'nome'
     );
@@ -76,7 +76,7 @@ async function salvarOuAtualizar(e) {
         carregarDisciplinas();
         preencherSelect(
             'curso',
-            'http://localhost:8080/api/curso',
+            '/api/curso',
             'id',
             'nome'
         );

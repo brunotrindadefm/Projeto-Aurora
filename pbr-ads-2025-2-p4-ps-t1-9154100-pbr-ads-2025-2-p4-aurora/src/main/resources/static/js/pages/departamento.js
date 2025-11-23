@@ -8,7 +8,7 @@ export function init() {
 
     preencherSelect(
         'chefe',
-        'http://localhost:8080/api/professor/disponivel-chefia',
+        '/api/professor/disponivel-chefia',
         'matricula',
         'nome'
     );
@@ -93,7 +93,7 @@ async function salvarOuAtualizar(e) {
         carregarDepartamentos();
         preencherSelect(
             'chefe',
-            'http://localhost:8080/api/professor/disponivel-chefia',
+            '/api/professor/disponivel-chefia',
             'matricula',
             'nome'
         );

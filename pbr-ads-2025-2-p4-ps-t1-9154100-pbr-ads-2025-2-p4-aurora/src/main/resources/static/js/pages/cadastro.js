@@ -13,7 +13,7 @@ async function cadastrarUsuario(e) {
     };
 
     try {
-        const resp = await fetch("http://localhost:8080/api/auth/cadastro", {
+        const resp = await fetch("/api/auth/cadastro", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData)

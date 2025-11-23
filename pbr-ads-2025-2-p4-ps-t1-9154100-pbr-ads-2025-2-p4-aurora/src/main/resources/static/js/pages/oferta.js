@@ -8,28 +8,28 @@ export function init() {
 
     preencherSelect(
         'unidade',
-        'http://localhost:8080/api/unidade',
+        '/api/unidade',
         'id',
         'nome'
     );
 
     preencherSelect(
         'disciplina',
-        'http://localhost:8080/api/disciplina',
+        '/api/disciplina',
         'id',
         'nome'
     );
 
     preencherSelect(
         'professor',
-        'http://localhost:8080/api/professor',
+        '/api/professor',
         'matricula',
         'nome'
     );
 
     preencherSelect(
         'turno',
-        'http://localhost:8080/api/turno',
+        '/api/turno',
         'id',
         'nome'
     );

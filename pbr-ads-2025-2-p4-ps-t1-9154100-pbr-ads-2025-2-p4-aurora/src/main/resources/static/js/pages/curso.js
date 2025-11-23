@@ -10,7 +10,7 @@ export function init() {
 
     preencherSelect(
         'departamento',
-        'http://localhost:8080/api/departamento',
+        '/api/departamento',
         'id',
         'nome'
     );

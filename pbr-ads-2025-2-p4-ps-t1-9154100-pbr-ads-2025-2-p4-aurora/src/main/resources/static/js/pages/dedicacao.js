@@ -8,14 +8,14 @@ export function init() {
 
     preencherSelect(
         'alocacao',
-        'http://localhost:8080/api/alocacao',
+        '/api/alocacao',
         'id',
         'nome'
     );
 
     preencherSelect(
         'oferta',
-        'http://localhost:8080/api/oferta',
+        '/api/oferta',
         'id',
         'nome'
     );
