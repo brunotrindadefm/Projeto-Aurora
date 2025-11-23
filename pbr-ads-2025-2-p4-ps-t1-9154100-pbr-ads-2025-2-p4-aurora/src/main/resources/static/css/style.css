@@ -1,0 +1,435 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  height: 100vh;
+  background-color: #f4f6fb;
+  overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  min-width: 240px;
+  background-color: #003366;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.logo-section {
+  text-align: center;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.sidebar h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.sidebar p {
+  font-size: 12px;
+  color: #b0c4de;
+  margin: 5px 0 15px;
+}
+
+/* Estilo para os títulos de seção no menu */
+.sidebar nav h3 {
+  color: #b0c4de;
+  font-size: 14px;
+  margin: 15px 0 5px 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.sidebar nav a {
+  display: block;
+  color: white;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background-color: #0059b3;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #b0c4de;
+}
+
+/* Conteúdo Principal (IMPORTANTE: permite a rolagem vertical) */
+.content {
+  flex: 1;
+  padding: 40px;
+  background-color: #f4f6fb;
+  overflow-y: auto;
+  /* <--- REFORÇADO PARA GARANTIR A ROLAGEM */
+}
+
+/* Botão de Menu Mobile (escondido por padrão) */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
+  background-color: #0059b3;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#main-content {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  min-height: 100%;
+  /* Ajuda o conteúdo a empurrar o container */
+}
+
+.dashboard-img {
+  display: block;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+/* Estilo Básico de Formulários para Desktop (Grid de 2 colunas) */
+
+
+.form-section label {
+  text-align: right;
+  font-weight: bold;
+}
+
+.form-section button[type="submit"] {
+  grid-column: 1 / 3;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Estilos de Tabelas */
+.list-section table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+  /* Garante que a tabela role no mobile */
+}
+
+/* Contêiner de rolagem horizontal para tabelas longas (RESPONSIVIDADE) */
+.responsive-table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.list-section table th,
+.list-section table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+
+/* Outros estilos globais */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #f4f7fa;
+}
+
+header {
+  background-color: #0059b3;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  height: 50px;
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+.form-section,
+.list-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+form input,
+form button,
+form select,
+form textarea {
+  /* Adicionado textarea */
+  padding: 8px;
+  margin: 5px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #0059b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* ==================================== */
+/* DASHBOARD: Efeito de Pulsação */
+/* ==================================== */
+@keyframes pulse-effect {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.metric-number.ready {
+  animation: pulse-effect 1.5s ease-in-out infinite;
+}
+
+/* ==================================== */
+/* MEDIA QUERIES - RESPONSIVIDADE  */
+/* ==================================== */
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  /* SIDEBAR: Fixa e Oculta */
+  .sidebar {
+    position: fixed;
+    z-index: 1000;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-240px);
+    /* Oculta a barra lateral */
+  }
+
+  /* Mostra a sidebar quando a classe 'open' é adicionada (pelo JS no index.html) */
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* Botão Hamburger */
+  .menu-toggle {
+    display: block;
+    /* Mostra o botão no mobile */
+  }
+
+  /* Conteúdo Principal */
+  .content {
+    padding: 10px;
+    /* Reduz o padding */
+    margin-top: 50px;
+    /* Espaço para o botão de menu fixo */
+  }
+
+  #main-content {
+    padding: 15px;
+  }
+
+  /* FORMULÁRIOS: Pilha Vertical (Colunas únicas) */
+  .form-section form {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .form-section label {
+    text-align: left;
+    margin-top: 5px;
+  }
+
+  .form-section button[type="submit"] {
+    grid-column: 1 / 2;
+  }
+}
+
+.btn-delete {
+  background-color: red;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: rgb(255, 67, 67);
+}
+
+.btn-editar {
+  background-color: blue;
+  color: white;
+}
+
+.btn-editar:hover {
+  background-color: rgb(67, 67, 255);
+}
+
+/* =========================
+   GERAL
+========================= */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fc;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* HEADER */
+.top-header {
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    width: 180px;
+}
+
+/* BOAS-VINDAS */
+.header-text {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.header-text h1 {
+    font-size: 2.2rem;
+    color: #0d2c5a;
+    margin-bottom: 10px;
+}
+
+.header-text p {
+    color: #555;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 40px 120px;
+}
+
+.card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: #0d2c5a;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.25s ease-in-out;
+}
+
+/* para o form.card.logout ficar igual aos outros cards */
+form.card.logout {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+/* botão interno ocupando todo o card e sem estilo padrão */
+.logout-btn {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #0d2c5a;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* CARD SAIR EM VERMELHO */
+.card.logout .icon,
+.card.logout h3 {
+    color: #c40000;
+}
+
+/* RESPONSIVO */
+@media (max-width: 800px) {
+    .cards {
+        padding: 20px;
+    }
+}

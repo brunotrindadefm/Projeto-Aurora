@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Titulações</title>
+</head>
+
+<body>
+    <header>
+        <a href="#/home" class="btn btn-light d-flex align-items-center gap-2 shadow-sm fw-bold">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+                <path d="m8 3.293 6 6V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V9.293l6-6Z" />
+            </svg>
+            Voltar
+        </a>
+        <div class="d-flex align-items-center gap-3">
+            <h1 class="h3 m-0 fw-bold">Cadastro de Titulações</h1>
+            <img src="../assets/logo2.png" alt="Logo Aurora" class="img-fluid" style="max-width: 60px;">
+        </div>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2 class="text-center mb-4">Nova Titulação</h2>
+
+            <form id="formTitulacao" class="card p-4 shadow-sm bg-white border-0 rounded-3">
+
+                <div class="mb-3">
+                    <label for="nomeTitulacao" class="form-label fw-medium">Nível de Titulação</label>
+                    <select id="nomeTitulacao" class="form-select" required>
+                        <option value="">Selecione...</option>
+                        <option value="GRADUADO">Graduado</option>
+                        <option value="ESPECIALISTA">Especialista</option>
+                        <option value="MESTRE">Mestre</option>
+                        <option value="DOUTOR">Doutor</option>
+                        <option value="POS_DOUTOR">Pós-doutor</option>
+                    </select>
+                </div>
+                <div class="d-flex gap-2">
+                    <button id="btnCancelar" type="button" class="btn btn-secondary w-100 d-none"
+                        onclick="cancelarEdicao()">
+                        Cancelar
+                    </button>
+                    <button id="btnSalvar" class="btn btn-primary w-100" type="submit">
+                        Salvar
+                    </button>
+                </div>
+            </form>
+
+        </section>
+
+        <section class="list-section">
+            <h2 class="text-center mb-4">Titulações Cadastradas</h2>
+            <div class="responsive-table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 3rem;"></th>
+                            <th style="width: 3rem;"></th>
+                            <th>ID</th>
+                            <th>Nome</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaTitulacao"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

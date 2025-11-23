@@ -1,0 +1,28 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Aurora
+authors: 
+  - family-names: Monteiro Parreiras
+    given-names: Arthur
+  - family-names: Stefany de Oliveira Rocha
+    given-names: Brenda
+  - family-names: Leticia Silva
+    given-names: Bruna
+  - family-names: Faria Pinheiro
+    given-names: Eduarda
+  - family-names: Florentina de Oliveira dos Reis
+    given-names: Elenice 
+  - family-names: Aurélio de Faria Ramos
+    given-names: Marco
+
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Dias Marciel
+    given-names: Wesley
+
+    keywords: Gestão universitária; Sistema de informação acadêmico; Governança universitária.
+
+repository-code: https://github.com/ICEI-PUC-Minas-PBR-ADS/pbr-ads-2025-2-p4-ps-t1-9154100-pbr-ads-2025-2-p4-aurora/tree/main
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 01/09/2025
