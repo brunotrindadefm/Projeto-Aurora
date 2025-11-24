@@ -14,6 +14,14 @@ export async function navigate() {
         }
     }
 
+    const tipoAcesso = sessionStorage.getItem("tipoAcesso");
+
+    if (tipoAcesso === "ALUNO")
+        document.body.classList.add("modo-aluno");
+    else
+        document.body.classList.remove("modo-aluno");
+
+
     const pageHtml = await fetch(`./${route}.html`)
         .then(res => res.text())
         .catch(err => {
@@ -27,7 +35,7 @@ export async function navigate() {
         .then(module => module.init && module.init())
         .catch(() => console.warn(`Página ${route} não possui JS`));
 
-    if(route == 'home')
+    if (route == 'home')
         renderHome()
 }
 

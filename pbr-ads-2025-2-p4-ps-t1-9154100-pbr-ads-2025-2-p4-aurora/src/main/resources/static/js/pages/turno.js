@@ -1,10 +1,8 @@
 import turnoApi from "../api/turnoApi.js";
-import { esconderCamposAluno } from "../app.js";
 import { mostrarNotificacao } from "../util/notificacao.js";
 let idEdicao = null;
 
 export function init() {
-    esconderCamposAluno()
     carregarTurno();
 
     document.getElementById("formTurno")

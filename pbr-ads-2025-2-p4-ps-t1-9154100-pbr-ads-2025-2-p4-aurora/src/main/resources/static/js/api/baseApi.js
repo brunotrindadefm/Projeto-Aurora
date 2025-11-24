@@ -1,6 +1,9 @@
 export default class BaseApi {
-  constructor(baseUrl) {
-    this.baseUrl = baseUrl;
+  constructor(endpoint) {
+    if (window.location.port === "5500" || window.location.port === "5501")
+      this.baseUrl = "http://localhost:8000" + endpoint;
+    else
+      this.baseUrl = endpoint;
   }
 
   async getAll() {

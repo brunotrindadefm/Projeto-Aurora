@@ -1,10 +1,9 @@
 import disciplinaApi from "../api/disciplinaApi.js";
-import { esconderCamposAluno, preencherSelect } from "../app.js";
 import { mostrarNotificacao } from "../util/notificacao.js";
+import { preencherSelect } from "../app.js";
 let idEdicao = null;
 
 export function init() {
-    esconderCamposAluno()
     carregarDisciplinas();
 
     preencherSelect(
@@ -74,12 +73,6 @@ async function salvarOuAtualizar(e) {
 
         cancelarEdicao();
         carregarDisciplinas();
-        preencherSelect(
-            'curso',
-            '/api/curso',
-            'id',
-            'nome'
-        );
 
     } catch (erro) {
         console.error(erro);
@@ -150,31 +143,4 @@ async function carregarDisciplinas() {
             </tr>
         `;
     }).join("");
-}
-
-async function salvarDisciplina(e) {
-    e.preventDefault();
-
-    const cursoId = document.getElementById("curso").value;
-
-    const disciplina = {
-        nome: document.getElementById("nome").value,
-        sigla: document.getElementById("sigla").value,
-        descricao: document.getElementById("descricao").value,
-        cargaHoraria: document.getElementById("cargaHoraria").value || null,
-        curso: cursoId ? { id: cursoId } : null
-    };
-
-    try {
-        await disciplinaApi.create(disciplina);
-        mostrarNotificacao("sucesso", "Disciplina criada!");
-
-        document.getElementById("formDisciplina").reset();
-
-    } catch (error) {
-        console.error("Erro ao salvar disciplina:", error);
-        mostrarNotificacao("error", error.message);
-    }
-
-    carregarDisciplinas();
 }

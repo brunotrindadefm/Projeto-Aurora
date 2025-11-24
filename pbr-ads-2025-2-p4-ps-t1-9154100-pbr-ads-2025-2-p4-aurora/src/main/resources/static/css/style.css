@@ -433,3 +433,11 @@ form.card.logout {
         padding: 20px;
     }
 }
+
+body.modo-aluno .form-section {
+    display: none !important;
+}
+
+body.modo-aluno .coluna-acao {
+    display: none !important;
+}

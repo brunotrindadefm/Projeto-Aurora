@@ -106,21 +106,6 @@ export async function preencherSelect(selectId, apiUrl, valueProp = 'id', textPr
   }
 }
 
-export function esconderCamposAluno() {
-    const tipoAcesso = sessionStorage.getItem("tipoAcesso");
-    const ehAluno = tipoAcesso === "ALUNO";
-
-    const form = document.getElementById("form-section");
-    const colunas = document.querySelectorAll(".coluna-acao");
-
-    if (ehAluno) {
-        form.style.display = "none";
-        colunas.forEach(coluna => {
-            coluna.style.display = "none";
-        });
-    }
-}
-
 function logout() {
   sessionStorage.clear()
   window.location.href = "../index.html";

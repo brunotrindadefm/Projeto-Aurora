@@ -1,7 +1,8 @@
-import unidadeApi from "../api/unidadeApi.js"; // Crie este arquivo se não existir
+import unidadeApi from "../api/unidadeApi.js";
 import { preencherSelect } from "../app.js";
 import { mostrarNotificacao } from "../util/notificacao.js";
 let idEdicao = null;
+import { preencherSelect } from "../app.js";
 
 export function init() {
     carregarUnidades();

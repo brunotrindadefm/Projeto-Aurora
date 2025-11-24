@@ -1,10 +1,9 @@
 import planoEnsinoApi from "../api/planoEnsinoApi.js";
-import { esconderCamposAluno, preencherSelect } from "../app.js";
 import { mostrarNotificacao } from "../util/notificacao.js";
 let idEdicao = null;
+import { preencherSelect } from "../app.js";
 
 export function init() {
-    esconderCamposAluno();
     carregarPlanosEnsino();
 
     preencherSelect(

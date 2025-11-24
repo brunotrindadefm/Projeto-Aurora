@@ -1,11 +1,9 @@
 import cursoApi from "../api/cursoApi.js";
-import { esconderCamposAluno, preencherSelect } from "../app.js";
 import { mostrarNotificacao } from "../util/notificacao.js";
+import { preencherSelect } from "../app.js";
 let idEdicao = null;
 
 export function init() {
-    esconderCamposAluno()
-
     carregarCursos();
 
     preencherSelect(

@@ -1,11 +1,8 @@
 import alunoApi from "../api/alunoApi.js";
 import { mostrarNotificacao } from "../util/notificacao.js";
-import { esconderCamposAluno } from "../app.js";
 let idEdicao = null;
 
 export function init() {
-    esconderCamposAluno()
-
     carregarAlunos();
 
     document.getElementById("formAluno")
